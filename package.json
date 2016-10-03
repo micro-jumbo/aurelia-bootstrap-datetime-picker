@@ -1,22 +1,23 @@
 {
-  "name": "aurelia-skeleton-plugin",
+  "name": "aurelia-bootstrap-datetime-picker",
   "version": "1.0.0",
-  "description": "A starter kit for building an Aurelia plugin.",
+  "description": "An Aurelia plugin for datetime picker.",
   "keywords": [
     "aurelia",
     "plugin",
-    "skeleton"
+    "datetime",
+    "picker"
   ],
-  "homepage": "http://aurelia.io",
+  "homepage": "https://github.com/micro-jumbo/aurelia-bootstrap-datetime-picker",
   "bugs": {
-    "url": "https://github.com/aurelia/skeleton-plugin/issues"
+    "url": "https://github.com/micro-jumbo/aurelia-bootstrap-datetime-picker/issues"
   },
   "license": "CC0-1.0",
-  "author": "Rob Eisenberg <rob@bluespire.com> (http://robeisenberg.com/)",
+  "author": "Cyprian Gracz <cyprian.gracz@micro-jumbo.eu>",
   "main": "dist/commonjs/index.js",
   "repository": {
     "type": "git",
-    "url": "http://github.com/aurelia/skeleton-plugin"
+    "url": "https://github.com/micro-jumbo/aurelia-bootstrap-datetime-picker"
   },
   "devDependencies": {
     "aurelia-tools": "^0.2.4",
@@ -41,6 +42,7 @@
     "isparta": "^4.0.0",
     "istanbul": "^1.0.0-alpha.2",
     "jasmine-core": "^2.4.1",
+    "jspm": "^0.16.46",
     "karma": "^1.1.2",
     "karma-babel-preprocessor": "^6.0.1",
     "karma-chrome-launcher": "^1.0.1",
@@ -55,13 +57,15 @@
   },
   "jspm": {
     "registry": "npm",
-    "jspmPackage": true,
     "main": "index",
     "format": "amd",
     "directories": {
       "dist": "dist/amd"
     },
-    "peerDependencies": {},
+    "dependencies": {
+      "bootstrap-datetime-picker": "^2.3.10",
+      "jquery": "^3.1.1"
+    },
     "devDependencies": {
       "aurelia-polyfills": "^1.0.0-beta.1.1.0"
     }
