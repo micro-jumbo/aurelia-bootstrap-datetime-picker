@@ -77,7 +77,7 @@ export let AureliaBootstrapDatetimePicker = (_dec = customElement('bootstrap-dat
   }
 
   detached() {
-    $(this.element).datepicker('destroy').off('changeDate');
+    $(this.element).datetimepicker('destroy').off('changeDate');
   }
 
   transformOptions(jqElem) {}

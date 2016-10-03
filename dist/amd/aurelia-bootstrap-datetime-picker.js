@@ -95,7 +95,7 @@ define(['exports', 'aurelia-framework', 'jquery', 'bootstrap-datetime-picker', '
     };
 
     AureliaBootstrapDatetimePicker.prototype.detached = function detached() {
-      (0, _jquery2.default)(this.element).datepicker('destroy').off('changeDate');
+      (0, _jquery2.default)(this.element).datetimepicker('destroy').off('changeDate');
     };
 
     AureliaBootstrapDatetimePicker.prototype.transformOptions = function transformOptions(jqElem) {};

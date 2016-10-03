@@ -35,7 +35,7 @@ export class AureliaBootstrapDatetimePicker {
   }
 
   detached() {
-    $(this.element).datepicker('destroy').off('changeDate');
+    $(this.element).datetimepicker('destroy').off('changeDate');
   }
   
   transformOptions(jqElem) {
