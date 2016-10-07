@@ -59,8 +59,8 @@ export let AureliaBootstrapDatetimePicker = (_dec = customElement('bootstrap-dat
   attached() {
     let self = this;
     let jq = $(this.element);
-    this.transformOptions(jq);
-    jq.datetimepicker(jq.data()).on('changeDate', function (e) {
+    let options = this.getOptions(jq) || {};
+    jq.datetimepicker(options).on('changeDate', function (e) {
       self.dateChanged(e.date);
     });
   }
@@ -80,7 +80,7 @@ export let AureliaBootstrapDatetimePicker = (_dec = customElement('bootstrap-dat
     $(this.element).datetimepicker('destroy').off('changeDate');
   }
 
-  transformOptions(jqElem) {}
+  getOptions(jqElem) {}
 }, (_descriptor = _applyDecoratedDescriptor(_class2.prototype, 'value', [_dec3], {
   enumerable: true,
   initializer: null

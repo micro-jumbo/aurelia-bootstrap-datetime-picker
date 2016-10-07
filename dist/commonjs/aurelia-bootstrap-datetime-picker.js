@@ -76,8 +76,8 @@ var AureliaBootstrapDatetimePicker = exports.AureliaBootstrapDatetimePicker = (_
   AureliaBootstrapDatetimePicker.prototype.attached = function attached() {
     var self = this;
     var jq = (0, _jquery2.default)(this.element);
-    this.transformOptions(jq);
-    jq.datetimepicker(jq.data()).on('changeDate', function (e) {
+    var options = this.getOptions(jq) || {};
+    jq.datetimepicker(options).on('changeDate', function (e) {
       self.dateChanged(e.date);
     });
   };
@@ -97,7 +97,7 @@ var AureliaBootstrapDatetimePicker = exports.AureliaBootstrapDatetimePicker = (_
     (0, _jquery2.default)(this.element).datetimepicker('destroy').off('changeDate');
   };
 
-  AureliaBootstrapDatetimePicker.prototype.transformOptions = function transformOptions(jqElem) {};
+  AureliaBootstrapDatetimePicker.prototype.getOptions = function getOptions(jqElem) {};
 
   return AureliaBootstrapDatetimePicker;
 }(), (_descriptor = _applyDecoratedDescriptor(_class2.prototype, 'value', [_dec3], {

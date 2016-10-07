@@ -16,8 +16,8 @@ export class AureliaBootstrapDatetimePicker {
   attached() {
     let self = this;
     let jq = $(this.element);
-    this.transformOptions(jq)
-    jq.datetimepicker(jq.data())
+    let options = this.getOptions(jq) || {}
+    jq.datetimepicker(options)
       .on('changeDate', function(e) {
         self.dateChanged(e.date)
       });
@@ -38,6 +38,6 @@ export class AureliaBootstrapDatetimePicker {
     $(this.element).datetimepicker('destroy').off('changeDate');
   }
   
-  transformOptions(jqElem) {
+  getOptions(jqElem) {
   }
 }
